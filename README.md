@@ -30,7 +30,7 @@
 
 ## Usage
 
-* `bundle intall`
+* `bundle install`
 * `rake db.migrate`
 * `rake db.seed`
 * `rails server`
