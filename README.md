@@ -34,7 +34,6 @@
 * `rake db.migrate`
 * `rake db.seed`
 * `rails server`
-
-`curl -i http://localhost:3000/api/v1/students/1`
-`curl -i http://localhost:3000/api/v1/teachers`
-`curl -i -X DELETE http://localhost:3000/api/v1/teachers/1`
+* 返回该名学生的所有课程与对应代课老师的信息：`curl -i http://localhost:3000/api/v1/students/1`
+* 返回所有的老师及其所带课程的信息：`curl -i http://localhost:3000/api/v1/teachers`
+* 删除该老师与所带课程的全部信息：`curl -i -X DELETE http://localhost:3000/api/v1/teachers/1`
