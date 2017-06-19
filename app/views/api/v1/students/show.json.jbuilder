@@ -9,7 +9,7 @@ json.student do
       json.id course.id
       json.name course.name
 
-      json.teachers course.teacher, :id, :name
+      json.teacher course.teacher, :id, :name
     end
   end
 end

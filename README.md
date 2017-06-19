@@ -34,3 +34,7 @@
 * `rake db.migrate`
 * `rake db.seed`
 * `rails server`
+
+`curl -i http://localhost:3000/api/v1/students/1`
+`curl -i http://localhost:3000/api/v1/teachers`
+`curl -i -X DELETE http://localhost:3000/api/v1/teachers/1`
