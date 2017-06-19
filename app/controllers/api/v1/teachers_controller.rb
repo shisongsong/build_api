@@ -4,7 +4,8 @@ class Api::V1::TeachersController< ApplicationController
   #
   # GET /api/v1/teachers
   def index
-    @teachers = Teacher.all 
+    @teachers = Teacher.all
+    render :json => { :teachers => @teachers.as_json(include: :courses) }
   end
 
   # 删除一个 teacher 及其所有课程的信息
@@ -14,6 +15,7 @@ class Api::V1::TeachersController< ApplicationController
     begin
       @teacher = Teacher.find(params[:id])
       @teacher.destroy
+      render :json => "Delete success", :status => 200
     rescue ActiveRecord::RecordNotFound => e
       not_found(e)
     end
